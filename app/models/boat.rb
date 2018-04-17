@@ -28,4 +28,8 @@ class Boat < ActiveRecord::Base
     Classification.where("name ==?","sailboat")
   end
 
+  def self.with_three_classifications
+    
+  end
+
 end #ends Boat class

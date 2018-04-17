@@ -16,6 +16,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.last_three_alphabetically
+    binding.pry
     all.limit(3)
   end
 

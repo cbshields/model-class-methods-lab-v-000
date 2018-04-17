@@ -17,7 +17,7 @@ class Boat < ActiveRecord::Base
 
   def self.last_three_alphabetically
     binding.pry
-    all.limit(3)
+    all.sort_by{|n| n.name}.last(3).reverse
   end
 
 

@@ -6,7 +6,10 @@ class Classification < ActiveRecord::Base
     all.uniq
   end
 
+  def self.longest
+
+  end
 
 
-  
+
 end #ends Classification

@@ -28,7 +28,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.with_three_classifications
-    includes(:classifications).where(classifications: {limit: 3})
+    joins(:classifications).group("boats.id").having("Count(*) = 3").select("boats.*")
   end
 
 end #ends Boat class

@@ -28,7 +28,7 @@ class Boat < ActiveRecord::Base
   end
 
   def self.with_three_classifications
-
+    includes(:classifcations).where(classifications: {limit(3)})
   end
 
 end #ends Boat class
